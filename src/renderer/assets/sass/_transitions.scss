@@ -1,0 +1,80 @@
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(0, 1, 0.5, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+.modal-background{
+  transition: opacity .3s ease;
+}
+.modal-card{
+  transition: all .3s ease;
+}
+.modal-enter {
+  transition: all .3s ease;
+  opacity: 0;
+}
+
+.modal-leave-active {
+  transition: all .3s ease;
+  opacity: 0;
+}
+
+.modal-enter .modal-card,
+.modal-leave-active .modal-card {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.reorder-item {
+  transition: all 0.5s;
+}
+
+.reorder-enter, .reorder-active {
+  opacity: 0;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: all 0.75s;
+}
+.slide-enter, .task-leave-to /* .list-leave-active for <2.1.8 */ {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-leave-active {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-left-enter-active, .slide-left-leave-active {
+  transition: all 0.75s;
+}
+.slide-left-enter, .task-left-leave-to /* .list-leave-active for <2.1.8 */ {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.slide-left-leave-active {
+  opacity: 0;
+  transform: translateX(-30px);
+}

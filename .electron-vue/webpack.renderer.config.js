@@ -59,7 +59,8 @@ let rendererConfig = {
             loaders: {
               sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
               scss: 'vue-style-loader!css-loader!sass-loader'
-            }
+            },
+            resources: ['./node_modules/bulma/bulma']
           }
         }
       },

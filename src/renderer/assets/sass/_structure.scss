@@ -1,0 +1,234 @@
+/** Sidebar menu */
+aside{
+  background-color: #ffffff !important;
+  .side-menu{
+    .fa-user{
+      //font-size: 60px;
+    }
+    .menu-label, .multi-select{
+      padding-left:0.25em;
+      .tooltip{
+        text-transform: none !important;
+      }
+    }
+    .menu-list{
+      a{
+        padding:0.8em 0.75em;
+        transition: all .3s ease;
+        //font-size:0.85em;
+        &.is-active{
+          background-color:#ffffff;
+          font-weight: bold;
+          border-left:3px solid $orange;
+          color:#4a4a4a ;
+        }
+        &:hover{
+          background-color: #ffffff;
+          color:#4a4a4a ;
+        }
+      }
+    }
+  }
+}
+
+.mobile-side-nav{
+  z-index: 5;
+  width: 90% !important;
+  display: block;
+  left: 0;
+  bottom: 0;
+  top:  0;
+  position: absolute;
+  @include tablet() {
+    width: 50%!important;
+  }
+}
+/** top nav */
+.navbar{
+  .navbar-burger{
+    margin-left:0;
+    margin-top:0.5em;
+  }
+}
+.container{
+  padding: 10px 20px;
+}
+hr{
+  color:#eaebec;
+}
+/** Todo boxs */
+.todo-toggles{
+  margin-bottom:0;
+}
+.main-todo-box{
+  margin-top:0 !important;
+}
+.task-table{
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+/** page */
+.header{
+  padding-top: 1em;
+}
+  .box{
+    &.place-holder{
+      box-shadow: none !important;
+      background-color:transparent;
+      border: rgba(10, 10, 10, 0.1) solid 1px;
+      .fa-circle{
+        color:#dbdbdb;
+      }
+    }
+    &.is-empty-inbox{
+      box-shadow: none !important;
+      background-color: transparent;
+      border: rgba(10, 10, 10, 0.1) solid 1px;
+    }
+  }
+
+.has-no-boarder{
+  border:none !important;
+}
+/** icons */
+.fa-plus-circle{
+  color:$orange;
+}
+.handle{
+  font-weight: bold;
+  margin-right: 0.5em;
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+/** Section **/
+.project-section{
+  padding-bottom: 1.5rem;
+}
+/** Task **/
+.task{
+  z-index: 5;
+  width: 90%;
+  display: block;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  padding: 2em;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  @include tablet() {
+    width: 50%;
+  }
+  .header{
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #dbdbdb;
+    position: relative;
+    .status{
+      i{
+        padding-top: .25em;
+        margin-right: 0.5em;
+      }
+    }
+    .fa-times{
+      position:absolute;
+      left:0;
+      top:0;
+    }
+  }
+  .body{
+    p{
+      font-size: 1.25em;
+    }
+    .task-updates{
+      textarea{
+        width: 100%;
+      }
+    }
+  }
+}
+.task-background{
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index: 4;
+  min-height: 100vh;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+/** forms **/
+
+.table{
+  &.place-holder{
+    background: none !important;
+  }
+}
+
+/** notifications  **/
+.notifications{
+  border-radius: 5px;
+  //padding: 1.25rem;
+  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1) !important;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1) !important;
+}
+.notification {
+ .notification-circle{
+   width:64px;
+   height:64px;
+   &.success{
+     background-color: $brand-success;
+   }
+   &.error{
+     background-color: $brand-danger;
+   }
+
+ }
+
+}
+
+.lable{
+  border: 1px solid #dbdbdb;
+  padding:1em;
+  margin-top:0.5em;
+  &.warn {
+    border-left: 5px solid #ff7739;
+  }
+  &.info {
+    border-left: 5px solid $brand-info;
+  }
+  &.success {
+    border-left: 5px solid $brand-success;
+  }
+}
+/** Image Cropper */
+.vue-cropper{
+  min-height:400px;
+}
+.circle{
+  border-radius: 50%;
+}
+.logo{
+  width:100px;
+  margin-top:0.5em;
+}
+.small-avatar{
+  width:50px;
+}
+
+/** ajax loader */
+
+.main-content {
+  position: relative;
+}
+.vue-simple-spinner-wrap {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+}
